@@ -1,0 +1,243 @@
+/* =========================
+   INICIO DE SESIÓN
+========================= */
+
+function iniciarSesion() {
+
+    let usuario = document.getElementById("usuario").value;
+
+    let password = document.getElementById("password").value;
+
+    let mensaje = document.getElementById("mensajeLogin");
+
+
+    if (usuario === "" || password === "") {
+
+        mensaje.innerHTML = "⚠️ Completa todos los campos.";
+
+        mensaje.style.color = "red";
+
+        return;
+
+    }
+
+
+    mensaje.innerHTML =
+        "✅ Bienvenido, " + usuario + "!";
+
+    mensaje.style.color = "green";
+
+}
+
+
+/* =========================
+   MODO OSCURO / CLARO
+========================= */
+
+function cambiarModo() {
+
+    document.body.classList.toggle("modo-oscuro");
+
+
+    if (document.body.classList.contains("modo-oscuro")) {
+
+        localStorage.setItem("tema", "oscuro");
+
+    } else {
+
+        localStorage.setItem("tema", "claro");
+
+    }
+
+}
+
+
+/* Mantener el modo elegido */
+
+window.addEventListener("load", function() {
+
+    let tema = localStorage.getItem("tema");
+
+    if (tema === "oscuro") {
+
+        document.body.classList.add("modo-oscuro");
+
+    }
+
+});
+
+
+/* =========================
+   JAVASCRIPT
+========================= */
+
+function mostrarMensajeJS() {
+
+    alert(
+        "🐎 JavaScript permite crear funciones interactivas en EquiSports."
+    );
+
+}
+
+
+/* =========================
+   JQUERY
+========================= */
+
+function efectoJquery() {
+
+    let texto = document.getElementById("textoJquery");
+
+    texto.style.transition = "0.6s";
+
+    texto.style.transform = "scale(1.1)";
+
+    texto.innerHTML =
+        "✨ ¡El contenido cambió gracias a una interacción!";
+
+    setTimeout(function() {
+
+        texto.style.transform = "scale(1)";
+
+    }, 600);
+
+}
+
+
+/* =========================
+   JSON
+========================= */
+
+function mostrarJSON() {
+
+    let caballo = {
+
+        nombre: "Relámpago",
+
+        raza: "Criollo",
+
+        edad: 8,
+
+        actividad: "Equitación"
+
+    };
+
+
+    document.getElementById("jsonEjemplo").textContent =
+        JSON.stringify(caballo, null, 4);
+
+}
+
+
+/* =========================
+   HOSTING
+========================= */
+
+function mostrarHosting() {
+
+    alert(
+        "🌐 El hosting almacena los archivos del sitio web y el dominio es su dirección en Internet."
+    );
+
+}
+
+
+/* =========================
+   CUESTIONARIO
+========================= */
+
+function calificar() {
+
+    let preguntas = [
+
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+
+    ];
+
+
+    let puntos = 0;
+
+
+    preguntas.forEach(function(pregunta) {
+
+        let respuesta =
+            document.querySelector(
+                'input[name="' + pregunta + '"]:checked'
+            );
+
+
+        if (respuesta) {
+
+            puntos += Number(respuesta.value);
+
+        }
+
+    });
+
+
+    let resultado =
+        document.getElementById("resultado");
+
+
+    resultado.innerHTML =
+        "Tu resultado es: " +
+        puntos +
+        " de 5";
+
+
+    if (puntos === 5) {
+
+        resultado.innerHTML +=
+            "<br>🏆 ¡Excelente trabajo!";
+
+    }
+
+    else if (puntos >= 3) {
+
+        resultado.innerHTML +=
+            "<br>👍 ¡Buen trabajo!";
+
+    }
+
+    else {
+
+        resultado.innerHTML +=
+            "<br>📚 Sigue estudiando.";
+
+    }
+
+}
+
+
+/* =========================
+   ANIMACIÓN AL HACER SCROLL
+========================= */
+
+window.addEventListener("scroll", function() {
+
+    let elementos =
+        document.querySelectorAll(".equi-card, .google-card");
+
+
+    elementos.forEach(function(elemento) {
+
+        let posicion =
+            elemento.getBoundingClientRect().top;
+
+        let pantalla =
+            window.innerHeight;
+
+
+        if (posicion < pantalla - 80) {
+
+            elemento.style.opacity = "1";
+
+        }
+
+    });
+
+     });

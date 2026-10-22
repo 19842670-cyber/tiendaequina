@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EquiSports | Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-equi sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            🐎 EquiSports
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="google.html">Google</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript.html">JavaScript</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="jquery.html">jQuery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="json.html">JSON</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="hosting.html">Hosting</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cuestionario.html">Quiz</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="formularo.html">formulario</a>
+                </li>
+
+                <li class="nav-item">
+                    <button class="btn btn-light btn-sm ms-lg-2" onclick="cambiarModo()">
+                        🌙
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- INICIO DE SESIÓN -->
+
+<section class="login-section">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            🐎
+        </div>
+
+        <h2>Bienvenido a EquiSports</h2>
+
+        <p>Inicia sesión para entrar a nuestro sitio.</p>
+
+        <input type="text" id="usuario" class="form-control mb-3"
+            placeholder="Usuario">
+
+        <input type="password" id="password" class="form-control mb-3"
+            placeholder="Contraseña">
+
+        <button class="btn btn-equi w-100" onclick="iniciarSesion()">
+            Iniciar sesión
+        </button>
+
+        <p id="mensajeLogin" class="mt-3"></p>
+
+    </div>
+
+</section>
+
+
+<!-- CARRUSEL -->
+
+<section class="container mt-5">
+
+    <div id="carouselEqui" class="carousel slide carousel-fade"
+        data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+
+            <button type="button" data-bs-target="#carouselEqui"
+                data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#carouselEqui"
+                data-bs-slide-to="1"></button>
+
+            <button type="button" data-bs-target="#carouselEqui"
+                data-bs-slide-to="2"></button>
+
+        </div>
+
+        <div class="carousel-inner rounded-4 shadow">
+
+            <div class="carousel-item active">
+
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1600&q=85"
+                    class="d-block w-100 carousel-img">
+
+                <div class="carousel-caption">
+                    <h2>El mundo de los caballos</h2>
+                    <p>Pasión, cuidado y tecnología.</p>
+                </div>
+
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1600&q=85"
+                    class="d-block w-100 carousel-img">
+
+                <div class="carousel-caption">
+                    <h2>Equitación</h2>
+                    <p>Una combinación entre caballo y jinete.</p>
+                </div>
+
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1600&q=85"
+                    class="d-block w-100 carousel-img">
+
+                <div class="carousel-caption">
+                    <h2>EquiSports</h2>
+                    <p>Conoce nuestros productos y tecnologías.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselEqui" data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselEqui" data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRESENTACIÓN -->
+
+<section class="container py-5">
+
+    <div class="text-center">
+
+        <h1 class="titulo">Bienvenido a EquiSports</h1>
+
+        <p class="texto-principal">
+            EquiSports es un sitio web dedicado al mundo de los caballos,
+            la equitación y la tecnología. Aquí podrás conocer productos
+            ecuestres y aprender sobre diferentes herramientas utilizadas
+            en el desarrollo web.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4 mt-3">
+
+        <div class="col-md-4">
+
+            <div class="card equi-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h3>🐴 Caballos</h3>
+
+                    <p>
+                        Información y contenido relacionado con el mundo
+                        equino.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card equi-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=900&q=80"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h3>🏇 Equitación</h3>
+
+                    <p>
+                        Conoce diferentes aspectos relacionados con la
+                        práctica ecuestre.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card equi-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=900&q=80"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h3>💻 Tecnología</h3>
+
+                    <p>
+                        Aprende sobre JavaScript, jQuery, JSON, hosting
+                        y otras tecnologías.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>🐎 EquiSports © 2026 | Proyecto educativo</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.jse" type="text/javascript"></script>
+
+</body>
+</html>

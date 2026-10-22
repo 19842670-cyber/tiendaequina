@@ -1,0 +1,477 @@
+:root {
+
+    --cafe: #4B2E1F;
+    --cafe-claro: #8B5E3C;
+    --beige: #F4EAD8;
+    --dorado: #C59B5B;
+    --verde: #596B45;
+    --oscuro: #30241E;
+    --blanco: #FFFFFF;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--beige);
+
+    color: var(--oscuro);
+
+    transition: 0.4s;
+
+}
+
+
+.navbar-equi {
+
+    background: var(--cafe);
+
+}
+
+
+.navbar-brand {
+
+    font-size: 23px;
+
+}
+
+
+.nav-link {
+
+    transition: 0.3s;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--dorado) !important;
+
+    transform: translateY(-2px);
+
+}
+
+
+.login-section {
+
+    min-height: 480px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+
+    linear-gradient(
+        rgba(48,36,30,0.65),
+        rgba(48,36,30,0.65)
+    ),
+
+    url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.login-box {
+
+    width: 360px;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    animation: aparecer 1s;
+
+}
+
+
+.login-logo {
+
+    font-size: 55px;
+
+}
+
+
+.btn-equi {
+
+    background: var(--cafe);
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 22px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-equi:hover {
+
+    background: var(--cafe-claro);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+
+.carousel-img {
+
+    height: 500px;
+
+    object-fit: cover;
+
+}
+
+
+.carousel-caption {
+
+    background: rgba(0,0,0,0.55);
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+}
+
+
+.titulo {
+
+    color: var(--cafe);
+
+    font-weight: bold;
+
+}
+
+
+.texto-principal {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+}
+
+
+.equi-card {
+
+    border: none;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    transition: 0.4s;
+
+}
+
+
+.equi-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+.equi-card img {
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+.google-card {
+
+    height: 100%;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+
+    transition: 0.4s;
+
+}
+
+
+.google-card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+}
+
+
+.google-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero-google {
+
+    padding: 90px 20px;
+
+    color: white;
+
+    background:
+
+    linear-gradient(
+        rgba(75,46,31,0.8),
+        rgba(75,46,31,0.8)
+    ),
+
+    url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.contenido {
+
+    min-height: 600px;
+
+}
+
+
+.imagen-tema {
+
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin: 20px 0;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+}
+
+
+.info-box {
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+
+pre {
+
+    background: #211a16;
+
+    color: #f4ead8;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+}
+
+
+.quiz-box {
+
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+}
+
+
+.quiz-box p {
+
+    margin-top: 25px;
+
+}
+
+
+.quiz-box label {
+
+    display: block;
+
+    padding: 10px;
+
+    margin: 5px 0;
+
+    background: #f4ead8;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+footer {
+
+    text-align: center;
+
+    background: var(--cafe);
+
+    color: white;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* MODO OSCURO */
+
+body.modo-oscuro {
+
+    background: #181412;
+
+    color: #eeeeee;
+
+}
+
+
+body.modo-oscuro .equi-card,
+body.modo-oscuro .google-card,
+body.modo-oscuro .info-box,
+body.modo-oscuro .quiz-box {
+
+    background: #29221e;
+
+    color: white;
+
+}
+
+
+body.modo-oscuro .titulo {
+
+    color: var(--dorado);
+
+}
+
+
+body.modo-oscuro .quiz-box label {
+
+    background: #3a302a;
+
+}
+
+
+body.modo-oscuro .login-box {
+
+    background: #29221e;
+
+    color: white;
+
+}
+
+
+body.modo-oscuro .login-box input {
+
+    background: #403630;
+
+    color: white;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .carousel-img {
+
+        height: 350px;
+
+    }
+
+    .login-box {
+
+        width: 90%;
+
+    }
+
+    .navbar-nav {
+
+        text-align: center;
+
+    }
+
+}
